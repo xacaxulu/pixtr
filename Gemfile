@@ -27,3 +27,7 @@ group :test do
   gem 'launchy'
   gem 'shoulda'
 end
+
+group :assets do
+  gem "uglifier"
+end
