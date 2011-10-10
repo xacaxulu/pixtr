@@ -8,10 +8,11 @@ class GalleriesController < ApplicationController
     @gallery = Gallery.new(params[:gallery])
 
     respond_to do |format|
-      if @gallery.save!
+      if @gallery.save
         format.html { redirect_to @gallery, notice: 'Gallery was successfully created.' }
       else
         format.html { render action: "new" }
+     
       end
     end
   end
