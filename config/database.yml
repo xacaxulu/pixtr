@@ -1,0 +1,22 @@
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: pixtr_development
+  pool: 5
+  min_messages: warning
+
+test: &test
+  adapter: postgresql
+  encoding: unicode
+  database: pixtr_test
+  pool: 5
+  min_messages: warning
+
+production:
+  adapter: postgresql
+  encoding: unicode
+  database: pixtr_production
+  pool: 5
+
+cucumber:
+  <<: *test
