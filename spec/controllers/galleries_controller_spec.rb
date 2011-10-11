@@ -5,6 +5,5 @@ describe GalleriesController, "#new" do
     get :new
   end
   
-  it { should respond_with(:success) }
-  it { should render_template(:new) }
+  it { response.should redirect_to(:root) }
 end
