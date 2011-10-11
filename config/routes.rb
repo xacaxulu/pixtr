@@ -1,6 +1,12 @@
 Pixtr::Application.routes.draw do
-  resources :galleries
+  resources :photos
+  
+  resources :galleries do
+    resources :photos
+  end
 
+
+  
   #root :to => 'high_voltage/pages#show', :id => 'home'
   root :to => 'galleries#index'
   # The priority is based upon order of creation:

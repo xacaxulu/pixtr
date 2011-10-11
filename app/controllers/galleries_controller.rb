@@ -30,6 +30,9 @@ class GalleriesController < ApplicationController
     @gallery = Gallery.find(params[:id])
   end
 
+  def edit
+      @gallery = Gallery.find(params[:id])
+    end
   private
   def deny_visitor
     #if signed out redirect
